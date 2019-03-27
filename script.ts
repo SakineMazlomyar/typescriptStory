@@ -10,7 +10,8 @@ class StoryStep {
 
     }
 }
-let storySteps: Array<StoryStep> = [];
+/* let storySteps: object[] = [object]; */
+let storySteps: Array<object> = [];
 
 let stepOne = new StoryStep(1, "Choose dog   Or horse", {left:{id:2, answer:"dog"}, right:{id:3, answer:"horse"}});
 let stepTwo = new StoryStep(2, "Choose  cat or mouse", {left:{id:4, answer:"cat"}, right:{id:5, answer:"mouse"}});
@@ -88,7 +89,7 @@ function getRightStories(choice: string) {
 
 function updateGame(){
     if(pTagg && leftButton && rightButton) {
-        
+    
         pTagg.innerText = curreStep.question
         leftButton.innerText = curreStep.cases.left.answer;
         rightButton.innerText = curreStep.cases.right.answer;

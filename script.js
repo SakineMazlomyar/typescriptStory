@@ -6,6 +6,7 @@ var StoryStep = /** @class */ (function () {
     }
     return StoryStep;
 }());
+/* let storySteps: object[] = [object]; */
 var storySteps = [];
 var stepOne = new StoryStep(1, "Choose dog   Or horse", { left: { id: 2, answer: "dog" }, right: { id: 3, answer: "horse" } });
 var stepTwo = new StoryStep(2, "Choose  cat or mouse", { left: { id: 4, answer: "cat" }, right: { id: 5, answer: "mouse" } });
