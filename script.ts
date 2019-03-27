@@ -88,7 +88,7 @@ function getRightStories(choice: string) {
 
 function updateGame(){
     if(pTagg && leftButton && rightButton) {
-    
+        
         pTagg.innerText = curreStep.question
         leftButton.innerText = curreStep.cases.left.answer;
         rightButton.innerText = curreStep.cases.right.answer;
