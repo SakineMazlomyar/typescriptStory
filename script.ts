@@ -1,8 +1,12 @@
+interface Choices {
+    left:{id:number, answer:string},
+    right:{id:number, answer:string}
+}
 class StoryStep {
     id:number;
     question:string;
-    cases:object;
-    constructor(id:number, question:string, cases:{}){
+    cases:Choices;
+    constructor(id:number, question:string, cases:Choices){
         this.id = id
         this.question = question
         this.cases = cases;
@@ -13,7 +17,9 @@ class StoryStep {
 /* let storySteps: object[] = [object]; */
 let storySteps: Array<object> = [];
 
-let stepOne = new StoryStep(1, "Choose dog   Or horse", {left:{id:2, answer:"dog"}, right:{id:3, answer:"horse"}});
+/* let stepOneChoice = {left:{id:2, answer:"dog"}, right:{id:3, answer:"horse"}}
+getChoice(stepOneChoice) */
+let stepOne = new StoryStep(1, "Choose dog   Or horse",{left:{id:2, answer:"dog"}, right:{id:3, answer:"horse"}});
 let stepTwo = new StoryStep(2, "Choose  cat or mouse", {left:{id:4, answer:"cat"}, right:{id:5, answer:"mouse"}});
 let stepThree = new StoryStep(3, "Choose between get and sushi", {left:{id:4, answer:"get"}, right:{id:5, answer:"sushi"}});
 let stepFour = new StoryStep(4, "choose tree or pasta", {left:{id:1, answer:"tree"}, right:{id:2, answer:"pasta"}});
